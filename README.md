@@ -7,7 +7,7 @@ I aim to create a server-client communication system where a server can handle m
 
 ## Algorithms
 
-## Server Algorithm
+## 1.Server Algorithm
 Parse command-line arguments to get the number of tutors and chairs.
 Create a socket and bind it to a specified port.
 Listen for incoming client connections.
@@ -18,7 +18,7 @@ Check for a termination signal.
 If a termination signal is received, send an acknowledgment and set a flag to shut down the server.
 Close the client socket.
 Shut down the server by user (the server will run in a while(1) loop and wait for more clients).
-## Client Algorithm
+## 2.Client Algorithm
 Parse command-line arguments to get the server IP, number of students, help sessions, and chairs.
 Initialize Winsock and create a socket.
 Connect to the server.
