@@ -1,19 +1,9 @@
-CROSS-OS BRIDGE
+##CROSS-OS BRIDGE
 CROSS-OS BRIDGE is a server-client communication system developed for my Operating Systems Lab at UET Peshawar. The server handles multiple client connections, manages tutor and chair resources, and shuts down gracefully upon receiving a termination signal. This project demonstrates practical applications in resource management, remote tutoring, and distributed task processing.
 
-Project Report
-Course: CSE 204L: Operating Systems Lab
-Submitted by:
-Muhammad Azeem Uddin Khan (22pwcse2167)
-Muhammad Talha Khan (22pwcse2213)
-Muhammad Ibad Khan (22pwcse2170)
-Class Section: A
-Submitted to: Engr. Abdullah Hamid
-Date: 24/06/2024
-Department: Department of Computer Systems Engineering
-University: University of Engineering and Technology, Peshawar
+
 Problem Statement
-We aim to create a server-client communication system where a server can handle multiple client connections. The server will manage tutor and chair resources and respond to client requests. Clients will connect to the server, request a specified number of help sessions and chairs, and then terminate the connection. The server will shut down gracefully upon receiving a termination signal from a client.
+I aim to create a server-client communication system where a server can handle multiple client connections. The server will manage tutor and chair resources and respond to client requests. Clients will connect to the server, request a specified number of help sessions and chairs, and then terminate the connection. The server will shut down gracefully upon receiving a termination signal from a client.
 
 Algorithm
 Server Algorithm
@@ -35,11 +25,11 @@ Simulate client actions by sending requests to the server.
 Send a termination signal to the server.
 Receive acknowledgment from the server.
 Close the socket and clean up Winsock resources.
-Flowchart
 
-Functions and Libraries Used
-Server Side (server.c on Linux)
-Functions:
+
+## Functions and Libraries Used
+## Server Side (server.c on Linux)
+## Functions:
 socket(): Creates a socket for communication.
 bind(): Binds the socket to a specific IP address and port.
 listen(): Sets the socket to listen for incoming connections.
@@ -48,19 +38,19 @@ pthread_create(): Creates a new thread to handle each client connection.
 pthread_join(): Waits for thread termination.
 read(), write(), send(), recv(): Functions for reading from and writing to sockets.
 close(): Closes sockets and cleans up resources.
-Libraries:
+## Libraries:
 stdio.h, stdlib.h, string.h: Standard C libraries for basic I/O, memory allocation, and string manipulation.
 unistd.h: Provides access to the POSIX operating system API (used for close() function).
 arpa/inet.h: Definitions for internet operations (used for struct sockaddr_in).
 pthread.h: POSIX threads library for thread management.
-Client Side (client.c for Windows)
-Functions:
+## Client Side (client.c for Windows)
+## Functions:
 WSAStartup(), WSACleanup(): Initialize and clean up Winsock (Windows Sockets API).
 socket(), connect(), send(), recv(): Functions for socket creation, connection establishment, and data transmission/reception.
 sprintf(): Format string into buffer.
 Sleep(): Pause execution for a specified number of milliseconds.
 closesocket(): Close the socket and release resources.
-Libraries:
+## Libraries:
 stdio.h, stdlib.h, string.h: Standard C libraries.
 winsock2.h: Header for Windows Sockets 2 API.
 windows.h: Windows API header providing access to core functions like Sleep().
