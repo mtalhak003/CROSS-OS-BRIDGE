@@ -5,7 +5,8 @@ CROSS-OS BRIDGE is a server-client communication system developed for my Operati
 ## Problem Statement
 I aim to create a server-client communication system where a server can handle multiple client connections. The server will manage tutor and chair resources and respond to client requests. Clients will connect to the server, request a specified number of help sessions and chairs, and then terminate the connection. The server will shut down gracefully upon receiving a termination signal from a client.
 
-## Algorithm
+## Algorithms
+
 ## Server Algorithm
 Parse command-line arguments to get the number of tutors and chairs.
 Create a socket and bind it to a specified port.
